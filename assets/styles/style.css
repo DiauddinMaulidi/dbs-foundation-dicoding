@@ -8,8 +8,7 @@ body {
   padding: 0;
 }
 
-h2,
-h3 {
+h2, h3 {
   color: #00a2c6;
 }
 
@@ -66,9 +65,11 @@ nav a:hover {
   text-align: center;
   color: white;
 }
+nav ul {
+  display: flex;
+}
 
 nav li {
-  display: inline;
   list-style-type: none;
   margin-right: 20px;
 }
@@ -83,28 +84,25 @@ nav {
 
 main {
   padding: 20px;
-  overflow: auto; /* langkah ketiga*/
-}
-/* langkah kesatu untuk membuar sidebar */
-#content {
-    width: 75%;
-    float: left;
-}
-
-/* langkah kedua */
-aside {
-    float: right;
-    width: 25%;
-    padding-left: 20px;
+  display: flex;
+  gap: 1rem;
 }
 
 header {
   display: inline;
 }
 
-@media screen and (max-width: 1000px) {
-    #content, aside {
-      width: 100%;
-      padding: 0;
+@media screen and (max-width: 1200px) {
+    main {
+      flex-flow: column nowrap;
     }
+    aside {
+      align-self: center;
+    }
+}
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+  
 }
