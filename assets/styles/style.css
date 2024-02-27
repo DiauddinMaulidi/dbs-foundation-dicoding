@@ -76,6 +76,9 @@ nav li {
 nav {
   background-color: #00a2c6;
   padding: 5px;
+
+  position: sticky;
+  top: 0;
 }
 
 main {
@@ -94,6 +97,11 @@ aside {
     width: 25%;
     padding-left: 20px;
 }
+
+header {
+  display: inline;
+}
+
 @media screen and (max-width: 1000px) {
     #content, aside {
       width: 100%;
