@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #FB7813;
+    color: white;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    padding-top: 10px;
+    background-color: white;
+    z-index: 99;
+
+    box-shadow: 0 .1px 10px #064420;
+    
+    position: sticky;
+    top: 0;
+}
+.container .logo-branding img {
+    width: 300px;
+    padding-top: 10px;
+}
+.container nav .list-nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+    padding: 2rem 0;
+
+}
+.container nav .list-nav ul li a {
+    text-decoration: none;
+    color: #00c72a;
+    padding: .5rem 1.5rem;
+    border-radius: 5rem;
+    transition: all .3s ease-in-out;
+}
+.container nav .list-nav ul li a:hover {
+    background-color: #FB7813;
+    color: white;
+}
+.container nav .navbar-extra {
+    display: none;
+    font-size: 1.5rem;
+    margin-top: -10px;
+    z-index: 10;
+}
+.container nav .navbar-extra a {
+    color: #064420;
+}
+main {
+    margin-top: -100px;
+}
+
+/* content-beranda */
+.content-beranda {
+    background-image: url('../img/bg-makan.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.content-beranda .thumbnail {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content-beranda::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(0deg, rgba(251, 120, 19, 1) 10%, rgba(251,120,19,0) 50%);
+
+}
+.content-beranda .thumbnail h1 {
+    font-family: "Bungee Spice", sans-serif;
+}
+
+/* tentang-kami */
+.tentang-kami {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5.5rem;
+    height: 100vh;
+}
+.tentang-kami h4 {
+    margin-bottom: 1rem;
+}
+.tentang-kami .isinya {
+    display: flex;
+    width: 65%;
+    align-items: center;
+}
+aside .profil img {
+    background-color: white;
+    box-shadow: 0 0 10px #00c72a;
+    width: 300px;
+    margin-left: 50px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+/* menu */
+.menu {
+    text-align: center;
+    padding: 5.5rem;
+    height: 100%;
+}
+.menu .daftar-menu {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 2rem auto;
+}
+.menu .daftar-menu img {
+    width: 200px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+/* footer */
+footer {
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #00c72a;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .container nav .list-nav ul {
+        flex-direction: column;
+        background-color: #ff9300;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 200px;
+        z-index: 10;
+
+        transition: all .5s ease-in-out;
+    }
+    .container nav .list-nav ul li:first-child {
+        margin-top: 45px;
+    }
+    .container nav .list-nav ul li {
+        display: flex;
+        gap: 3rem;
+    }
+    .container nav .list-nav ul li a {
+        width: 100%;
+    }
+    .container nav .list-nav ul li a:hover {
+        border: 2px solid #B7E5B4;
+        background-color: white;
+        color: #FB7813;
+    }
+    .container nav .navbar-extra {
+        display: inline-block;
+        position: fixed;
+    }
+    .container nav .navbar-extra {
+        display: inline-block;
+        position: fixed;
+    }
+    .container nav .list-nav.aktif ul {
+        right: 0;
+    }
+    .tentang-kami .isinya {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 10px;
+    }
+    aside .profil img {
+        margin: 2rem auto;
+        width: 250px;
+    }
+    .menu .daftar-menu {
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 700px) {
+    .menu .daftar-menu img {
+        width: 300px;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .container nav .navbar-extra a {
+        margin-left: -20px;
+    }
+}
