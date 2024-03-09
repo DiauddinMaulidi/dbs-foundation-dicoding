@@ -14,7 +14,7 @@ class Car {
     }
 
     turn(direction) {
-        console.log(`${this.brand} ${this.color} is turning ${direction}`);
+        return `${this.brand} ${this.color} is turning ${direction}`;
     }
 
     #generateChassisNumber() {
@@ -31,5 +31,6 @@ const car2 = new Car('Honda', 'black', 180);
 const car3 = new Car('Suzuki', 'blue', 200);
 
 console.log(car1.drive());
+console.log(car3.turn("left"));
 console.log(car2.chassisNumber());
 
