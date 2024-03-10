@@ -16,7 +16,7 @@
 
 // car.drive();
 // car.turn();
-
+// ---------------------------------------
 
 // contoh OOP di javascript
 
@@ -38,7 +38,7 @@
 // console.log(car1.drive());
 // console.log(car2.drive());
 // console.log(car3.drive());
-
+// ----------------------------------------------
 
 // constructor class
 class Car {
